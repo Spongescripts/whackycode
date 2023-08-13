@@ -1,0 +1,560 @@
+local Library = {} 
+ function Library:CreateWindow(WinName) 
+         local BloodLibrary = Instance.new("ScreenGui") 
+         local MainHolder_1 = Instance.new("Frame") 
+         local UIStroke_1 = Instance.new("UIStroke") 
+         local Main_1 = Instance.new("Frame") 
+         local TopBar_1 = Instance.new("Frame") 
+         local UIStroke_2 = Instance.new("UIStroke") 
+         local TextLabel_1 = Instance.new("TextLabel") 
+         local UIPadding_1 = Instance.new("UIPadding") 
+         local TextButton_1 = Instance.new("TextButton") 
+         local ElementsHolderHolder_1 = Instance.new("Frame") 
+         local UIStroke_10 = Instance.new("UIStroke") 
+         local TabHolder_1 = Instance.new("Frame") 
+         local UIStroke_11 = Instance.new("UIStroke") 
+  
+         BloodLibrary.Name = "BloodLibrary" 
+         BloodLibrary.Parent = game.CoreGui
+         BloodLibrary.Enabled = true 
+  
+         MainHolder_1.Name = "MainHolder" 
+         MainHolder_1.Parent = BloodLibrary 
+         MainHolder_1.AnchorPoint = Vector2.new(0.5, 0.5) 
+         MainHolder_1.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+         MainHolder_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+         MainHolder_1.BorderSizePixel = 0 
+         MainHolder_1.Position = UDim2.new(0.5, 0,0.5, 0) 
+         MainHolder_1.Size = UDim2.new(0, 399,0, 458) 
+         MainHolder_1.Active = true 
+         MainHolder_1.Draggable = true 
+  
+         UIStroke_1.Parent = MainHolder_1 
+         UIStroke_1.Color = Color3.fromRGB(255,0,0) 
+         UIStroke_1.Thickness = 1 
+  
+         Main_1.Name = "Main" 
+         Main_1.Parent = MainHolder_1 
+         Main_1.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+         Main_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+         Main_1.BorderSizePixel = 0 
+         Main_1.Position = UDim2.new(0.0200501252, 0,0.0218340605, 0) 
+         Main_1.Size = UDim2.new(0, 383,0, 438) 
+  
+         TopBar_1.Name = "TopBar" 
+         TopBar_1.Parent = Main_1 
+         TopBar_1.BackgroundColor3 = Color3.fromRGB(40,9,9) 
+         TopBar_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+         TopBar_1.BorderSizePixel = 0 
+         TopBar_1.Size = UDim2.new(0, 383,0, 27) 
+  
+         UIStroke_2.Parent = TopBar_1 
+         UIStroke_2.Color = Color3.fromRGB(255,0,0) 
+         UIStroke_2.Thickness = 1 
+  
+         TextLabel_1.Parent = TopBar_1 
+         TextLabel_1.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+         TextLabel_1.BackgroundTransparency = 1 
+         TextLabel_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+         TextLabel_1.BorderSizePixel = 0 
+         TextLabel_1.Position = UDim2.new(0, 0,0.0740740746, 0) 
+         TextLabel_1.Size = UDim2.new(0, 341,0, 22) 
+         TextLabel_1.Font = Enum.Font.Code 
+         TextLabel_1.Text = WinName 
+         TextLabel_1.TextColor3 = Color3.fromRGB(255,20,0) 
+         TextLabel_1.TextSize = 14 
+         TextLabel_1.TextXAlignment = Enum.TextXAlignment.Left 
+  
+         UIPadding_1.Parent = TextLabel_1 
+         UIPadding_1.PaddingLeft = UDim.new(0,6) 
+  
+         TextButton_1.Parent = TopBar_1 
+         TextButton_1.Active = true 
+         TextButton_1.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+         TextButton_1.BackgroundTransparency = 1 
+         TextButton_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+         TextButton_1.BorderSizePixel = 0 
+         TextButton_1.Position = UDim2.new(0.937336802, 0,0.0370370373, 0) 
+         TextButton_1.Size = UDim2.new(0, 24,0, 24) 
+         TextButton_1.Font = Enum.Font.Gotham 
+         TextButton_1.Text = "X" 
+         TextButton_1.TextColor3 = Color3.fromRGB(255,20,0) 
+         TextButton_1.TextSize = 14 
+  
+         ElementsHolderHolder_1.Name = "ElementsHolderHolder" 
+         ElementsHolderHolder_1.Parent = Main_1 
+         ElementsHolderHolder_1.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+         ElementsHolderHolder_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+         ElementsHolderHolder_1.BorderSizePixel = 0 
+         ElementsHolderHolder_1.Position = UDim2.new(0, 0,0.0662100464, 0) 
+         ElementsHolderHolder_1.Size = UDim2.new(0, 382,0, 409) 
+  
+  
+  
+         UIStroke_10.Parent = Main_1 
+         UIStroke_10.Color = Color3.fromRGB(255,0,0) 
+         UIStroke_10.Thickness = 1 
+  
+         TabHolder_1.Name = "TabHolder" 
+         TabHolder_1.Parent = Main_1 
+         TabHolder_1.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+         TabHolder_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+         TabHolder_1.Position = UDim2.new(0, 0,0.0639269426, 0) 
+         TabHolder_1.Size = UDim2.new(0, 383,0, 36) 
+  
+         UIStroke_11.Parent = TabHolder_1 
+         UIStroke_11.Color = Color3.fromRGB(255,0,0) 
+         UIStroke_11.Thickness = 1 
+  
+         local Tabs = {} 
+         function Tabs:CreateTab(TabName) 
+                 local TabBtnHolder_1 = Instance.new("Frame") 
+                 local TabBtn_1 = Instance.new("TextButton") 
+                 local UIStroke_12 = Instance.new("UIStroke") 
+                 local UIListLayout_3 = Instance.new("UIListLayout") 
+                 local UIPadding_7 = Instance.new("UIPadding") 
+                 local ElementsHolder_1 = Instance.new("Frame") 
+                 local UIListLayout_2 = Instance.new("UIListLayout") 
+  
+                 TabBtnHolder_1.Name = "TabBtnHolder" 
+                 TabBtnHolder_1.Parent = TabHolder_1 
+                 TabBtnHolder_1.BackgroundColor3 = Color3.fromRGB(40,9,9) 
+                 TabBtnHolder_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                 TabBtnHolder_1.BorderSizePixel = 0 
+                 TabBtnHolder_1.Size = UDim2.new(0, 89,0, 28) 
+  
+                 TabBtn_1.Name = "TabBtn" 
+                 TabBtn_1.Parent = TabBtnHolder_1 
+                 TabBtn_1.Active = true 
+                 TabBtn_1.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+                 TabBtn_1.BackgroundTransparency = 1 
+                 TabBtn_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                 TabBtn_1.BorderSizePixel = 0 
+                 TabBtn_1.Size = UDim2.new(0, 89,0, 28) 
+                 TabBtn_1.Font = Enum.Font.Code 
+                 TabBtn_1.Text = TabName 
+                 TabBtn_1.TextColor3 = Color3.fromRGB(255,20,0) 
+                 TabBtn_1.TextSize = 14 
+  
+                 UIStroke_12.Parent = TabBtnHolder_1 
+                 UIStroke_12.Color = Color3.fromRGB(255,0,0) 
+                 UIStroke_12.Thickness = 1 
+  
+                 UIListLayout_3.Parent = TabHolder_1 
+                 UIListLayout_3.Padding = UDim.new(0,6) 
+                 UIListLayout_3.FillDirection = Enum.FillDirection.Horizontal 
+                 UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder 
+  
+                 UIPadding_7.Parent = TabHolder_1 
+                 UIPadding_7.PaddingLeft = UDim.new(0,4) 
+                 UIPadding_7.PaddingTop = UDim.new(0,4) 
+  
+                 ElementsHolder_1.Name = "ElementsHolder" 
+                 ElementsHolder_1.Parent = ElementsHolderHolder_1 
+                 ElementsHolder_1.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+                 ElementsHolder_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                 ElementsHolder_1.BorderSizePixel = 0 
+                 ElementsHolder_1.Position = UDim2.new(0, 0,0.0977995098, 0) 
+                 ElementsHolder_1.Size = UDim2.new(0, 382,0, 369) 
+  
+                 UIListLayout_2.Parent = ElementsHolder_1 
+                 UIListLayout_2.Padding = UDim.new(0,3) 
+                 UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal 
+                 UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder  
+                 
+                 TabBtn_1.MouseButton1Click:Connect(function()   
+                 TabBtnHolder_1.BackgroundColor3 = Color3.fromRGB(138,8,8) 
+                                 wait(0.1) 
+                                 TabBtnHolder_1.BackgroundColor3 = Color3.fromRGB(40,9,9) 
+                         for i,v in next, ElementsHolderHolder_1:GetChildren() do -- We get all the pages that we added   
+                                 v.Visible = false   -- then we make them invisible    
+                         end    
+                         ElementsHolder_1.Visible = true  -- We make current page visible but not others   
+                 end) 
+ 
+                 local Sections = {} 
+                 function Sections:CreateSection() 
+                         local Section_1 = Instance.new("Frame") 
+                         local Items_1 = Instance.new("ScrollingFrame") 
+                         local UIPadding_2 = Instance.new("UIPadding") 
+                         local UIListLayout_1 = Instance.new("UIListLayout") 
+  
+                         Section_1.Name = "Section" 
+                         Section_1.Parent = ElementsHolder_1 
+                         Section_1.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+                         Section_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                         Section_1.BorderSizePixel = 0 
+                         Section_1.Size = UDim2.new(0, 190,0, 368) 
+  
+                         Items_1.Name = "Items" 
+                         Items_1.Parent = Section_1 
+                         Items_1.Active = true 
+                         Items_1.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+                         Items_1.BackgroundTransparency = 1 
+                         Items_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                         Items_1.BorderSizePixel = 0 
+                         Items_1.Size = UDim2.new(0, 190,0, 368) 
+                         Items_1.ClipsDescendants = true 
+                         Items_1.AutomaticCanvasSize = Enum.AutomaticSize.Y 
+                         Items_1.BottomImage = "rbxasset://textures/ui/Scroll/scroll-bottom.png" 
+                         Items_1.CanvasPosition = Vector2.new(0, 0) 
+                         Items_1.CanvasSize = UDim2.new(0, 0,1, 0) 
+                         Items_1.ElasticBehavior = Enum.ElasticBehavior.Never 
+                         Items_1.HorizontalScrollBarInset = Enum.ScrollBarInset.None 
+                         Items_1.MidImage = "rbxasset://textures/ui/Scroll/scroll-middle.png" 
+                         Items_1.ScrollBarImageColor3 = Color3.fromRGB(0,0,0) 
+                         Items_1.ScrollBarImageTransparency = 1 
+                         Items_1.ScrollBarThickness = 1 
+                         Items_1.ScrollingDirection = Enum.ScrollingDirection.XY 
+                         Items_1.TopImage = "rbxasset://textures/ui/Scroll/scroll-top.png" 
+                         Items_1.VerticalScrollBarInset = Enum.ScrollBarInset.None 
+                         Items_1.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Right 
+  
+  
+                         UIPadding_2.Parent = Items_1 
+                         UIPadding_2.PaddingLeft = UDim.new(0,7) 
+                         UIPadding_2.PaddingTop = UDim.new(0,5) 
+  
+                         UIListLayout_1.Parent = Items_1 
+                         UIListLayout_1.Padding = UDim.new(0,6) 
+                         UIListLayout_1.SortOrder = Enum.SortOrder.LayoutOrder 
+  
+  
+                         local Elements = {} 
+                         function Elements:CreateLabel(LabName) 
+                                 local LabelTxtFrame_1 = Instance.new("Frame") 
+                                 local LabelTxt_1 = Instance.new("TextLabel") 
+  
+                                 LabelTxtFrame_1.Name = "LabelTxtFrame" 
+                                 LabelTxtFrame_1.Parent = Items_1 
+                                 LabelTxtFrame_1.BackgroundColor3 = Color3.fromRGB(40,9,9) 
+                                 LabelTxtFrame_1.BackgroundTransparency = 1 
+                                 LabelTxtFrame_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 LabelTxtFrame_1.BorderSizePixel = 0 
+                                 LabelTxtFrame_1.Position = UDim2.new(-0.000249281526, 0,0, 0) 
+                                 LabelTxtFrame_1.Size = UDim2.new(0, 175,0, 18) 
+  
+                                 LabelTxt_1.Name = "LabelTxt" 
+                                 LabelTxt_1.Parent = LabelTxtFrame_1 
+                                 LabelTxt_1.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+                                 LabelTxt_1.BackgroundTransparency = 1 
+                                 LabelTxt_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 LabelTxt_1.BorderSizePixel = 0 
+                                 LabelTxt_1.Size = UDim2.new(0, 175,0, 17) 
+                                 LabelTxt_1.Font = Enum.Font.Code 
+                                 LabelTxt_1.Text = LabName 
+                                 LabelTxt_1.TextColor3 = Color3.fromRGB(255,20,0) 
+                                 LabelTxt_1.TextSize = 12 
+                                 LabelTxt_1.TextWrapped = true 
+                         end 
+                         function Elements:CreateButton(ButName,Callback) 
+                                                 Callback = Callback or function() end 
+                                 local ButtonBtnFrame_1 = Instance.new("Frame") 
+                                 local UIStroke_3 = Instance.new("UIStroke") 
+                                 local ButtonBtn_1 = Instance.new("TextButton") 
+  
+                                 ButtonBtnFrame_1.Name = "ButtonBtnFrame" 
+                                 ButtonBtnFrame_1.Parent = Items_1 
+                                 ButtonBtnFrame_1.BackgroundColor3 = Color3.fromRGB(40,9,9) 
+                                 ButtonBtnFrame_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 ButtonBtnFrame_1.BorderSizePixel = 0 
+                                 ButtonBtnFrame_1.Position = UDim2.new(-0.000249281526, 0,0, 0) 
+                                 ButtonBtnFrame_1.Size = UDim2.new(0, 175,0, 18) 
+  
+                                 UIStroke_3.Parent = ButtonBtnFrame_1 
+                                 UIStroke_3.Color = Color3.fromRGB(255,0,0) 
+                                 UIStroke_3.Thickness = 1 
+  
+                                 ButtonBtn_1.Name = "ButtonBtn" 
+                                 ButtonBtn_1.Parent = ButtonBtnFrame_1 
+                                 ButtonBtn_1.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+                                 ButtonBtn_1.BackgroundTransparency = 1 
+                                 ButtonBtn_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 ButtonBtn_1.BorderSizePixel = 0 
+                                 ButtonBtn_1.Size = UDim2.new(0, 175,0, 17) 
+                                 ButtonBtn_1.Font = Enum.Font.Code 
+                                 ButtonBtn_1.Text = ButName 
+                                 ButtonBtn_1.TextColor3 = Color3.fromRGB(255,20,0) 
+                                 ButtonBtn_1.TextSize = 14 
+                                 
+                         ButtonBtn_1.MouseButton1Click:Connect(function()  
+                                 ButtonBtnFrame_1.BackgroundColor3 = Color3.fromRGB(138,8,8) 
+                                 wait(0.1) 
+                                 ButtonBtnFrame_1.BackgroundColor3 = Color3.fromRGB(40,9,9) 
+                                 Callback()      
+                         end)  
+                         end 
+                         function Elements:CreateToggle(TogName,Callback) 
+                               Callback = Callback or function() end  
+  
+                         local toggled = false  
+                         local debounce = false 
+                                 local ToggleBtnFrame_1 = Instance.new("Frame") 
+                                 local UIStroke_4 = Instance.new("UIStroke") 
+                                 local ToggleBtnFrame_2 = Instance.new("TextButton") 
+                                 local UIPadding_3 = Instance.new("UIPadding") 
+                                 local Toggler_1 = Instance.new("Frame") 
+                                 local UIStroke_5 = Instance.new("UIStroke") 
+  
+                                 ToggleBtnFrame_1.Name = "ToggleBtnFrame" 
+                                 ToggleBtnFrame_1.Parent = Items_1 
+                                 ToggleBtnFrame_1.BackgroundColor3 = Color3.fromRGB(40,9,9) 
+                                 ToggleBtnFrame_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 ToggleBtnFrame_1.BorderSizePixel = 0 
+                                 ToggleBtnFrame_1.Position = UDim2.new(-0.000249281526, 0,0, 0) 
+                                 ToggleBtnFrame_1.Size = UDim2.new(0, 175,0, 18) 
+  
+                                 UIStroke_4.Parent = ToggleBtnFrame_1 
+                                 UIStroke_4.Color = Color3.fromRGB(255,0,0) 
+                                 UIStroke_4.Thickness = 1 
+  
+                                 ToggleBtnFrame_2.Name = "ToggleBtnFrame" 
+                                 ToggleBtnFrame_2.Parent = ToggleBtnFrame_1 
+                                 ToggleBtnFrame_2.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+                                 ToggleBtnFrame_2.BackgroundTransparency = 1 
+                                 ToggleBtnFrame_2.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 ToggleBtnFrame_2.BorderSizePixel = 0 
+                                 ToggleBtnFrame_2.Size = UDim2.new(0, 175,0, 17) 
+                                 ToggleBtnFrame_2.Font = Enum.Font.Code 
+                                 ToggleBtnFrame_2.Text = TogName 
+                                 ToggleBtnFrame_2.TextColor3 = Color3.fromRGB(255,20,0) 
+                                 ToggleBtnFrame_2.TextSize = 14 
+                                 ToggleBtnFrame_2.TextXAlignment = Enum.TextXAlignment.Left 
+  
+                                 UIPadding_3.Parent = ToggleBtnFrame_2 
+                                 UIPadding_3.PaddingLeft = UDim.new(0,5) 
+  
+                                 Toggler_1.Name = "Toggler" 
+                                 Toggler_1.Parent = ToggleBtnFrame_1 
+                                 Toggler_1.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+                                 Toggler_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 Toggler_1.BorderSizePixel = 0 
+                                 Toggler_1.Position = UDim2.new(0.898971498, 0,0.111111112, 0) 
+                                 Toggler_1.Size = UDim2.new(0, 14,0, 13) 
+  
+                                 UIStroke_5.Parent = Toggler_1 
+                                 UIStroke_5.Color = Color3.fromRGB(255,0,0) 
+                                 UIStroke_5.Thickness = 1 
+                                 
+                                                         ToggleBtnFrame_2.MouseButton1Click:Connect(function()  
+                                 if debounce == false then  
+                                         if toggled == false then  
+                                                 debounce = true  
+                                                 Toggler_1.BackgroundColor3 = Color3.fromRGB(255,0,0) 
+                                                 debounce = false  
+                                                 toggled = true  
+                                                 pcall(Callback, toggled)  
+                                         elseif toggled == true then  
+                                                 debounce = true   
+                                                 Toggler_1.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+                                                 debounce = false  
+                                                 toggled = false  
+                                                 pcall(Callback, toggled)  
+                                         end  
+                                 end  
+                         end) 
+                         end 
+                         function Elements:CreateBox(BoxName,Callback) 
+                                 local BoxTxtFrameFrame_1 = Instance.new("Frame") 
+                                 local UIStroke_6 = Instance.new("UIStroke") 
+                                 local BoxHolder_1 = Instance.new("Frame") 
+                                 local UIStroke_7 = Instance.new("UIStroke") 
+                                 local TextBox_1 = Instance.new("TextBox") 
+                                 local BoxTxt_1 = Instance.new("TextLabel") 
+                                 local UIPadding_4 = Instance.new("UIPadding") 
+  
+                                 BoxTxtFrameFrame_1.Name = "BoxTxtFrameFrame" 
+                                 BoxTxtFrameFrame_1.Parent = Items_1 
+                                 BoxTxtFrameFrame_1.BackgroundColor3 = Color3.fromRGB(40,9,9) 
+                                 BoxTxtFrameFrame_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 BoxTxtFrameFrame_1.BorderSizePixel = 0 
+                                 BoxTxtFrameFrame_1.Position = UDim2.new(-0.000249281526, 0,0, 0) 
+                                 BoxTxtFrameFrame_1.Size = UDim2.new(0, 175,0, 18) 
+  
+                                 UIStroke_6.Parent = BoxTxtFrameFrame_1 
+                                 UIStroke_6.Color = Color3.fromRGB(255,0,0) 
+                                 UIStroke_6.Thickness = 1 
+  
+                                 BoxHolder_1.Name = "BoxHolder" 
+                                 BoxHolder_1.Parent = BoxTxtFrameFrame_1 
+                                 BoxHolder_1.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+                                 BoxHolder_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 BoxHolder_1.BorderSizePixel = 0 
+                                 BoxHolder_1.Position = UDim2.new(0.636114299, 0,0.111111112, 0) 
+                                 BoxHolder_1.Size = UDim2.new(0, 60,0, 13) 
+  
+                                 UIStroke_7.Parent = BoxHolder_1 
+                                 UIStroke_7.Color = Color3.fromRGB(255,0,0) 
+                                 UIStroke_7.Thickness = 1 
+  
+                                 TextBox_1.Parent = BoxHolder_1 
+                                 TextBox_1.Active = true 
+                                 TextBox_1.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+                                 TextBox_1.BackgroundTransparency = 1 
+                                 TextBox_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 TextBox_1.BorderSizePixel = 0 
+                                 TextBox_1.CursorPosition = -1 
+                                 TextBox_1.Size = UDim2.new(0, 60,0, 12) 
+                                 TextBox_1.Font = Enum.Font.Code 
+                                 TextBox_1.PlaceholderColor3 = Color3.fromRGB(255,20,0) 
+                                 TextBox_1.PlaceholderText = "" 
+                                 TextBox_1.Text = "" 
+                                 TextBox_1.TextColor3 = Color3.fromRGB(255,20,0) 
+                                 TextBox_1.TextSize = 11 
+  
+                                 BoxTxt_1.Name = "BoxTxt" 
+                                 BoxTxt_1.Parent = BoxTxtFrameFrame_1 
+                                 BoxTxt_1.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+                                 BoxTxt_1.BackgroundTransparency = 1 
+                                 BoxTxt_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 BoxTxt_1.BorderSizePixel = 0 
+                                 BoxTxt_1.Size = UDim2.new(0, 108,0, 17) 
+                                 BoxTxt_1.Font = Enum.Font.Code 
+                                 BoxTxt_1.Text = BoxName 
+                                 BoxTxt_1.TextColor3 = Color3.fromRGB(255,20,0) 
+                                 BoxTxt_1.TextSize = 14 
+                                 BoxTxt_1.TextXAlignment = Enum.TextXAlignment.Left 
+  
+                                 UIPadding_4.Parent = BoxTxt_1 
+                                 UIPadding_4.PaddingLeft = UDim.new(0,5) 
+                                 
+                                                         TextBox_1.FocusLost:Connect(function(enterpressed)   
+                                 if enterpressed then   
+                                         Callback(TextBox_1.Text)   
+                                 end   
+                         end)  
+                         end 
+                         function Elements:CreateSlider(SliName,Callback) 
+                         Callback = Callback or function() end
+
+minvalue = minvalue or 0
+maxvalue = maxvalue or 100
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+local uis = game:GetService("UserInputService")
+local Value;
+
+                                 local SliderHolderFrame_1 = Instance.new("Frame") 
+                                 local UIStroke_8 = Instance.new("UIStroke") 
+                                 local SliderTxt_1 = Instance.new("TextLabel") 
+                                 local UIPadding_5 = Instance.new("UIPadding") 
+                                 local SliderValue_1 = Instance.new("TextLabel") 
+                                 local UIPadding_6 = Instance.new("UIPadding") 
+                                 local SliderHolder_1 = Instance.new("Frame") 
+                                 local SliderButton_1 = Instance.new("TextButton") 
+                                 local SliderInner_1 = Instance.new("Frame") 
+                                 local UIStroke_9 = Instance.new("UIStroke") 
+  
+                                 SliderHolderFrame_1.Name = "SliderHolderFrame" 
+                                 SliderHolderFrame_1.Parent = Items_1 
+                                 SliderHolderFrame_1.BackgroundColor3 = Color3.fromRGB(40,9,9) 
+                                 SliderHolderFrame_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 SliderHolderFrame_1.BorderSizePixel = 0 
+                                 SliderHolderFrame_1.Position = UDim2.new(0.036842104, 0,0.274456531, 0) 
+                                 SliderHolderFrame_1.Size = UDim2.new(0, 175,0, 41) 
+  
+                                 UIStroke_8.Parent = SliderHolderFrame_1 
+                                 UIStroke_8.Color = Color3.fromRGB(255,0,0) 
+                                 UIStroke_8.Thickness = 1 
+  
+                                 SliderTxt_1.Name = "SliderTxt" 
+                                 SliderTxt_1.Parent = SliderHolderFrame_1 
+                                 SliderTxt_1.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+                                 SliderTxt_1.BackgroundTransparency = 1 
+                                 SliderTxt_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 SliderTxt_1.BorderSizePixel = 0 
+                                 SliderTxt_1.Size = UDim2.new(0, 110,0, 17) 
+                                 SliderTxt_1.Font = Enum.Font.Code 
+                                 SliderTxt_1.Text = SliName 
+                                 SliderTxt_1.TextColor3 = Color3.fromRGB(255,20,0) 
+                                 SliderTxt_1.TextSize = 14 
+                                 SliderTxt_1.TextXAlignment = Enum.TextXAlignment.Left 
+  
+                                 UIPadding_5.Parent = SliderTxt_1 
+                                 UIPadding_5.PaddingLeft = UDim.new(0,5) 
+  
+                                 SliderValue_1.Name = "SliderValue" 
+                                 SliderValue_1.Parent = SliderHolderFrame_1 
+                                 SliderValue_1.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+                                 SliderValue_1.BackgroundTransparency = 1 
+                                 SliderValue_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 SliderValue_1.BorderSizePixel = 0 
+                                 SliderValue_1.Position = UDim2.new(0.67428571, 0,0, 0) 
+                                 SliderValue_1.Size = UDim2.new(0, 56,0, 17) 
+                                 SliderValue_1.Font = Enum.Font.Code 
+                                 SliderValue_1.Text = "0/100" 
+                                 SliderValue_1.TextColor3 = Color3.fromRGB(255,20,0) 
+                                 SliderValue_1.TextSize = 14 
+                                 SliderValue_1.TextXAlignment = Enum.TextXAlignment.Right 
+  
+                                 UIPadding_6.Parent = SliderValue_1 
+                                 UIPadding_6.PaddingRight = UDim.new(0,5) 
+  
+                                 SliderHolder_1.Name = "SliderHolder" 
+                                 SliderHolder_1.Parent = SliderHolderFrame_1 
+                                 SliderHolder_1.BackgroundColor3 = Color3.fromRGB(40,9,9) 
+                                 SliderHolder_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 SliderHolder_1.BorderSizePixel = 0 
+                                 SliderHolder_1.Position = UDim2.new(0.0399999991, 0,0.537, 0) 
+                                 SliderHolder_1.Size = UDim2.new(0, 161,0, 14) 
+  
+                                 SliderButton_1.Name = "SliderButton" 
+                                 SliderButton_1.Parent = SliderHolder_1 
+                                 SliderButton_1.Active = true 
+                                 SliderButton_1.AnchorPoint = Vector2.new(0.5, 0.5) 
+                                 SliderButton_1.BackgroundColor3 = Color3.fromRGB(255,255,255) 
+                                 SliderButton_1.BackgroundTransparency = 1 
+                                 SliderButton_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 SliderButton_1.BorderSizePixel = 0 
+                                 SliderButton_1.Position = UDim2.new(0.5, 0,0.5, 0) 
+                                 SliderButton_1.Size = UDim2.new(0, 161,0, 14) 
+                                 SliderButton_1.Font = Enum.Font.Code 
+                                 SliderButton_1.Text = "" 
+                                 SliderButton_1.TextSize = 1 
+  
+                                 SliderInner_1.Name = "SliderInner" 
+                                 SliderInner_1.Parent = SliderButton_1 
+                                 SliderInner_1.BackgroundColor3 = Color3.fromRGB(255,0,0) 
+                                 SliderInner_1.BorderColor3 = Color3.fromRGB(27,42,53) 
+                                 SliderInner_1.BorderSizePixel = 0 
+                                 SliderInner_1.Size = UDim2.new(0, 0,0, 14) 
+  
+                                 UIStroke_9.Parent = SliderHolder_1 
+                                 UIStroke_9.Color = Color3.fromRGB(255,0,0) 
+                                 UIStroke_9.Thickness = 1 
+  
+  SliderButton_1.MouseButton1Down:Connect(function()
+    Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 161) * SliderHolder_1.AbsoluteSize.X) + tonumber(minvalue)) or 0
+    pcall(function()
+        Callback(Value)
+    end)
+    SliderInner_1.Size = UDim2.new(0, math.clamp(mouse.X - SliderInner_1.AbsolutePosition.X, 0, 161), 0, 14)
+    moveconnection = mouse.Move:Connect(function()
+        SliderValue_1.Text = Value.."/100"
+        Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 161) * SliderInner_1.AbsoluteSize.X) + tonumber(minvalue))
+        pcall(function()
+            Callback(Value)
+        end)
+        SliderInner_1.Size = UDim2.new(0, math.clamp(mouse.X - SliderInner_1.AbsolutePosition.X, 0, 161), 0, 14)
+    end)
+    releaseconnection = uis.InputEnded:Connect(function(Mouse)
+        if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+            Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 161) * SliderInner_1.AbsoluteSize.X) + tonumber(minvalue))
+            pcall(function()
+                Callback(Value)
+            end)
+            SliderInner_1.Size = UDim2.new(0, math.clamp(mouse.X - SliderInner_1.AbsolutePosition.X, 0, 161), 0, 14)
+            moveconnection:Disconnect()
+            releaseconnection:Disconnect()
+        end
+    end)
+end)
+
+                         end 
+                         return Elements 
+                 end 
+                 return Sections 
+         end 
+         return Tabs 
+ end 
+ return Library
